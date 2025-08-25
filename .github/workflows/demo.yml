@@ -10,17 +10,18 @@ jobs:
   Run-tests:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 Start preparing for tests..."
-      - name: Check out repository code
-        uses: actions/checkout@v4
-      - name: Set up JDK
-        uses: actions/setup-java@v4
+#      - run: echo "🎉 Start preparing for tests..."
+#      - name: Check out repository code
+      - uses: actions/checkout@v4
+
+#      - name: Set up JDK
+      - uses: actions/setup-java@v4
         with:
           distribution: "temurin"
           java-version: "21"
 
-      - run: echo "💡 The JDK is ready to use!"
+#      - run: echo "💡 The JDK is ready to use!"
       - name: Build and test with Maven
         run: mvn test
 
-      - run: echo "🍏 All tests passes!"
+#      - run: echo "🍏 All tests passes!"
